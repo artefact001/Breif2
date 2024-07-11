@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', showIdeas);
-
+    
 function validateForm() {
     const label = document.getElementById('label').value.trim();
     const category = document.getElementById('category').value.trim();
@@ -7,33 +7,52 @@ function validateForm() {
 
     let isValid = true;
 
+   
+    // Validation pour le libellé (label)
     if (label === "") {
         document.getElementById('labelError').innerText = "Le libellé est requis.";
+        isValid = false;
+    } else if (label.length < 5 || label.length > 70) {
+        document.getElementById('labelError').innerText = "Le libellé doit être entre 5 et 70 caractères.";
         isValid = false;
     } else {
         document.getElementById('labelError').innerText = "";
     }
 
-    if (category === "") {
+       // Validation pour la catégorie (category)
+       if (category === "") {
         document.getElementById('categoryError').innerText = "La catégorie est requise.";
+        isValid = false;
+    } else if (category.length < 5 || category.length > 70) {
+        document.getElementById('categoryError').innerText = "La catégorie doit être entre 5 et 70 caractères.";
         isValid = false;
     } else {
         document.getElementById('categoryError').innerText = "";
     }
 
+    
+
+    // Validation pour le message
     if (message === "") {
         document.getElementById('messageError').innerText = "Le message est requis.";
+        isValid = false;
+    } else if (message.length < 5 || message.length > 70) {
+        document.getElementById('messageError').innerText = "Le message doit être entre 5 et 70 caractères.";
         isValid = false;
     } else {
         document.getElementById('messageError').innerText = "";
     }
 
-    if (!isValid) {
-        showMessage("Tous les champs sont requis !", 'danger');
-    }
+  
 
-    return isValid;
+if (!isValid) {
+    showMessage("Tous les champs sont requis ou invalides !", 'danger');
 }
+
+return isValid;
+}
+
+
 
 function addIdea(event) {
     event.preventDefault();
@@ -159,3 +178,13 @@ function showMessage(message, type) {
 }
 
 document.getElementById('ideaForm').addEventListener('submit', addIdea);
+
+
+
+
+
+
+
+
+
+
