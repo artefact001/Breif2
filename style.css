@@ -6,3 +6,24 @@ body {
 .btn {
     margin-right: 5px;
 }
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-image: url('https://visme.co/blog/wp-content/uploads/2021/01/header-3.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
