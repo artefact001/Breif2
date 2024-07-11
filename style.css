@@ -1,0 +1,8 @@
+body {
+    background: hsl(219, 26%, 89%);
+    color: hsl(0, 71%, 70%);
+}
+
+.btn {
+    margin-right: 5px;
+}
