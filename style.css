@@ -1,13 +1,12 @@
 body {
     background: hsl(219, 26%, 89%);
     color: hsl(0, 71%, 70%);
+    font-family: Arial, sans-serif;
+
 }
 
 .btn {
     margin-right: 5px;
-}
-body {
-    font-family: Arial, sans-serif;
 }
 
 header {

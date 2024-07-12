@@ -43,16 +43,12 @@ function validateForm() {
         document.getElementById('messageError').innerText = "";
     }
 
-  
-
 if (!isValid) {
     showMessage("Tous les champs sont requis ou invalides !", 'danger');
 }
 
 return isValid;
 }
-
-
 
 function addIdea(event) {
     event.preventDefault();
